@@ -35,6 +35,9 @@ class RecipePresenter {
         let title = recipe.title ?? ""
         view.setTitle(image: image, title: title, countSteps: steps.count)
         view.disablePreviousButton()
+        if steps.count == 1 {
+            self.view.setNextButtonThanks()
+        }
         self.setStepOnView()
     }
     
