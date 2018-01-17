@@ -13,12 +13,10 @@ class ApiClient {
     
     static let shared = ApiClient()
     
-    var alamofireManager : Alamofire.SessionManager!
+    private var alamofireManager : Alamofire.SessionManager
     
     init() {
-        let configuration = URLSessionConfiguration.default
-        configuration.httpAdditionalHeaders = ["X-Mashape-Key":"KuSzJ9SN2wmsh5AQWMx6Se4isNIAp1YEvZMjsnEei2KiJZcZTe", "X-Mashape-Host":"spoonacular-recipe-food-nutrition-v1.p.mashape.com"]
-        alamofireManager = Alamofire.SessionManager(configuration: configuration)
+        alamofireManager = Alamofire.SessionManager()
     }
     
     
