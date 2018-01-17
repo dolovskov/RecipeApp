@@ -47,16 +47,11 @@ class StartViewController: UIViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showRecipe" {
-             let destination = segue.destination as! UINavigationController
-            let recipeVC = destination.topViewController as! RecipeViewController
-            recipeVC.recipe = self.recipe
-        }
+        guard let destination = segue.destination as? UINavigationController else {return}
+        guard let recipeVC = destination.topViewController as? RecipeViewController else {return}
+        recipeVC.recipe = self.recipe
     }
     
-    @IBAction func unwindToStart(segue: UIStoryboardSegue) {
-        
-    }
     
     
 }

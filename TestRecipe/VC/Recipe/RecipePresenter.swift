@@ -10,13 +10,13 @@ import Foundation
 
 class RecipePresenter {
     
-    let view : RecipeView
+    private let view : RecipeView
     
-    let recipe: Recipe
+    private let recipe: Recipe
     
-    var steps : [Step]!
+    private var steps : [Step]!
     
-    var activeStep = 0
+    private var activeStep = 0
     
     required init(view: RecipeView) {
         self.view = view
@@ -52,7 +52,7 @@ class RecipePresenter {
     
     func nextButtonClick() {
         if activeStep == steps.count - 1 {
-            view.close()
+            view.dismissAction()
         } else {
             activeStep += 1
             setStepOnView()

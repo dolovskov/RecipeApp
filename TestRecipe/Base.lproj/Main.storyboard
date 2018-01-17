@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -234,7 +234,7 @@
                     <navigationItem key="navigationItem" id="32u-ty-lBf">
                         <barButtonItem key="leftBarButtonItem" title="Close" id="DHk-mb-Krh">
                             <connections>
-                                <segue destination="iNd-2G-ZnL" kind="unwind" identifier="closeView" unwindAction="unwindToStartWithSegue:" id="uBe-MG-itX"/>
+                                <action selector="closeButtonClick:" destination="vIU-Be-CzX" id="0pc-2o-dTN"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -250,9 +250,8 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bIx-ze-Nlj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="iNd-2G-ZnL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2038" y="-266"/>
+            <point key="canvasLocation" x="2118" y="-266"/>
         </scene>
     </scenes>
     <resources>

@@ -20,5 +20,5 @@ protocol RecipeView {
     
     func setNextButtonNext()
     
-    func close()
+    func dismissAction()
 }

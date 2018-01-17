@@ -7,6 +7,6 @@ target 'TestRecipe' do
 
   	# Pods for TestRecipe
 	pod 'Alamofire', '~> 4.5'
-	pod 'ObjectMapper', '~> 2.2'
+	pod 'ObjectMapper', '~> 3.1'
 	
 end

@@ -10,11 +10,10 @@ import UIKit
 
 class RecipeViewController: UIViewController, RecipeView {
     
-    var presenter : RecipePresenter!
+    private var presenter : RecipePresenter!
+    private var countSteps : Int = 0
     
-    var recipe : Recipe!
-    
-    var countSteps : Int!
+    var recipe = Recipe()
     
     @IBOutlet var imageView: CircleImageView!
     
@@ -27,7 +26,6 @@ class RecipeViewController: UIViewController, RecipeView {
     @IBOutlet var previousStepButton: DesignableButton!
     @IBOutlet var nextStepButton: DesignableButton!
     @IBOutlet var barProgress: UIProgressView!
-    
     
     
     override func viewDidLoad() {
@@ -90,18 +88,12 @@ class RecipeViewController: UIViewController, RecipeView {
         presenter.nextButtonClick()
     }
     
-    func close() {
-        self.performSegue(withIdentifier: "closeView", sender: self)
+    @IBAction func closeButtonClick(_ sender: Any) {
+        dismissAction()
     }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    
+    func dismissAction() {
+        self.dismiss(animated: true, completion: nil)
+    }
     
 }
-
